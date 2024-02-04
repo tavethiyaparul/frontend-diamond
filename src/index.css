@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  /* font-family: 'Open Sans', sans-serif; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,221 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    /* font-family: 'Open Sans', sans-serif; */
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Rubik+Beastly",cursive; */
+}
+.navbar{
+  background-color: blanchedalmond;
+}
+.navbar-brand{
+  font-size: 1.9rem;
+  color: blueviolet;
+}
+
+.navbar a{
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
+
+.menu_active{
+  font-weight: bold;
+  border-bottom: 1px solid blue;
+}
+.navbar a:hover{
+  color: cornflowerblue;
+}
+
+#header{
+  width: 100%;
+  height: 80vh;
+  margin-top: 70px;
+}
+
+#header h1{
+  margin: 0,0,10px,0;
+  font-size: 48px;
+  font-weight: 700;
+  color:black
+}
+
+#header .brand-name{
+  color:#3498db;
+}
+
+#header h2{
+  color: #484844;
+  font-size: 20px;
+}
+
+#header .btn-get-started{
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #3498db;
+  border:2px solid #3498db;
+  text-decoration: none;
+}
+
+#header .btn-get-started:hover{
+  background: #3498db;
+  color: #fff;
+}
+
+.header-img{
+  text-align: right;
+}
+
+#header .animated{
+  animation: 'up-down 2s ease-in-out infinite alternate-reverse both' ;
+}
+
+/* // top header */
+.top-header {
+  background-color: #333; /* Set your desired background color */
+  color: #fff; /* Set your desired text color */
+  padding: 10px 0; /* Add padding as needed */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-block {
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+/* ---- */
+
+.carousel-container {
+  height: 600px; /* Adjust the height according to your preference */
+}
+
+.carousel-image {
+  height: auto; /* Allow the image to maintain its aspect ratio */
+  max-height: 600px; /* Set a maximum height to avoid overly tall images */
+  margin: 0 auto; /* Center the image horizontally */
+} 
+
+.social-grid ul {
+  margin: 0;
+  padding: 0;
+}
+
+.social-grid li {
+  display: inline-block;
+  margin-left: 10px; /* Adjust the margin between social icons */
+}
+
+.social-grid a {
+  color: #fff; /* Set your desired color for social icons */
+  text-decoration: none;
+}
+
+.top-header {
+  background-color: #f7f0f0;
+  color: #020101;
+  padding: 5px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-block,
+.social-icons a {
+  color: #0a0606;
+  margin-right: 25px;
+  align-items-center:center;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Change the color on hover */
+}
+
+/* Add more styles as needed */
+
+
+@-webkit-keyframes up-down {
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+  
+}
+@keyframes up-down {
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+  
+}
+
+@media (max-width:991px){
+  #header{
+    height: 80vh;
+    text-align: center;
+  }
+  #header .header-img{
+    text-align: center;
+  }
+  #header .header-img img{
+    width: 60%;
+  }
+}
+
+@media(max-width: 768px){
+  #header{
+    margin-top :20px ;
+  }
+  #header h1{
+    font-size: 28px;
+  }
+  #header h2{
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  #header .header-img img{
+    width:70%
+  }
+  .info-block,
+  .social-icons {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+  
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
