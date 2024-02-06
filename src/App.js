@@ -12,6 +12,7 @@ import "./App.css"
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Search from './component/Search';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/signup" element={<SingUp />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/diamond" element={<Search />} />
 
           <Route path='*' element={<Error />} />
 

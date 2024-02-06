@@ -159,9 +159,51 @@ code {
   color: #007bff; /* Change the color on hover */
 }
 
+/* search */
+/* Default styles */
+.d-flex.align-items-center.gap-2 {
+  margin-bottom: 20px; /* Add margin for spacing between each Select component */
+}
+
+/* .d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.fs-5 {
+  font-size: 1.25rem;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.pe-3 {
+  padding-right: 0.75rem;
+} */
+
 /* Add more styles as needed */
 
+/* //search */
 
+.panel{
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.panel-blue{
+ border: 1px solid #0087FF;
+ background-color: #DDEDFF;
+ color:#0087FF
+}
 @-webkit-keyframes up-down {
   0%{
     transform: translateY(10px);
@@ -179,6 +221,13 @@ code {
     transform: translateX(-10px);
   }
   
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 767px) {
+  .d-flex.align-items-center.gap-2 {
+    width: 100%; /* Make each item take full width on smaller screens */
+  }
 }
 
 @media (max-width:991px){
@@ -212,6 +261,14 @@ code {
   .social-icons {
     text-align: center;
     margin-top: 10px;
+  }
+
+  .d-flex {
+    flex-direction: column; /* Change to column layout on smaller screens */
+  }
+
+  .gap-2 {
+    gap: 1rem; /* Adjust gap for smaller screens */
   }
 }
   

@@ -1,18 +1,556 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Select, { components, OptionProps } from 'react-select'
+import roundshape from '../images/round.webp'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { Col, Container, Row } from 'react-bootstrap';
 const Search = () => {
+    const [shape, setShape] = useState()
+
+    const shapeOption = [
+        { value: "ROUND", label: "Round", image: roundshape },
+        { value: "PEAR", label: "Pear", image: roundshape },
+        { value: "OVEL", label: "Ovel", image: roundshape },
+        { value: "MARAUISE", label: "Marquise", image: roundshape },
+        { value: "HEART", label: "Heart", image: roundshape },
+        { value: "RADIANT", label: "Radiant", image: roundshape },
+        { value: "PRINCESS", label: "Princess", image: roundshape },
+        { value: "EMERALD", label: "Amerald", image: roundshape },
+        { value: "ASSCHER", label: "Asscher", image: roundshape },
+        { value: "BAGUETTE", label: "Baguette", image: roundshape },
+        { value: "EMERALD", label: "Emerald", image: roundshape },
+        { value: "TRIANGLE", label: "Triangle", image: roundshape },
+        { value: "CUSHION", label: "Cushion", image: roundshape },
+        { value: "MARAUISE", label: "Marquise", image: roundshape },
+        { value: "OTHER", label: "Other", image: roundshape },
+
+    ]
+
+    const sizeOption = [
+        { value: "3X", label: "3X" },
+        { value: "EX-", label: "EX-" },
+        { value: "VG+", label: "VG+" },
+        { value: "VG-", label: "VG-" },
+    ]
+    const colorOption = [
+        { value: "D", label: "D" },
+        { value: "E", label: "E" },
+        { value: "F", label: "F" },
+        { value: "G", label: "G" },
+        { value: "H", label: "H" },
+        { value: "I", label: "I" },
+        { value: "J", label: "J" },
+        { value: "K", label: "K" },
+        { value: "L", label: "L" },
+        { value: "M", label: "M" },
+        { value: "N", label: "N" },
+        { value: "O", label: "O" },
+        { value: "P", label: "P" },
+        { value: "Q", label: "Q" },
+        { value: "R", label: "R" },
+        { value: "S", label: "S" },
+        { value: "T", label: "T" },
+        { value: "U", label: "U" },
+        { value: "V", label: "V" },
+        { value: "W", label: "W" },
+        { value: "X", label: "X" },
+        { value: "Y", label: "Y" },
+        { value: "Z", label: "Z" },
+    ]
+
+    const clarityOption = [
+        { value: "FL", label: "FL" },
+        { value: "IF", label: "IF" },
+        { value: "VVS1", label: "VVS1" },
+        { value: "VVS2", label: "VVS2" },
+        { value: "VS1", label: "VS1" },
+        { value: "VS2", label: "VS2" },
+        { value: "SI1", label: "SI1" },
+        { value: "SI2", label: "SI2" },
+        { value: "SI3", label: "SI3" },
+        { value: "I1", label: "I1" },
+        { value: "I2", label: "I2" },
+        { value: "I3", label: "I3" },
+    ]
+
+    const fluoOption = [
+        { value: "NONE", label: "None" },
+        { value: "VSL", label: "Very Slight" },
+        { value: "FAINT", label: "Faint" },
+        { value: "SL", label: "Slight" },
+        { value: "MED", label: "Medium" },
+        { value: "STG", label: "Storang" },
+        { value: "VST", label: "Very Storang" },
+    ]
+
+    const fluocColorOption = [
+        { value: "BLUE", label: "Blue" },
+        { value: "YELLOW", label: "Yellow" },
+        { value: "VG", label: "Very Good" },
+    ]
+    const gardingOption = [
+        { value: "GIA", label: "GIA" },
+        { value: "IGI", label: "IGI" },
+        { value: "HRD", label: "HRD" },
+        { value: "NONCERT", label: "NONCERT" },
+    ]
+
+    const finishOption = [
+        { value: "3X", label: "3X" },
+        { value: "EX-", label: "EX-" },
+        { value: "VG+", label: "VG+" },
+        { value: "VG-", label: "VG-" },
+    ]
+
+    const cutOption = [
+        { value: "EX", label: "Excellent" },
+        { value: "GD", label: "Good" },
+        { value: "VG", label: "Very Good" },
+    ]
+    const polishOption = [
+        { value: "EX", label: "Excellent" },
+        { value: "GD", label: "Good" },
+        { value: "VG", label: "Very Good" },
+    ]
+    const Option = (props) => (
+        <components.Option {...props}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input type="checkbox" checked={props.isSelected} onChange={() => null} style={{ marginRight: '10px' }} />
+                <img
+                    src={props.data.image}
+                    alt={props.label}
+                    style={{ marginRight: '10px', width: '30px', height: '30px' }}
+                />
+                {props.label}
+            </div>
+        </components.Option>
+    );
+
+    const InputOption = ({
+        getStyles,
+        Icon,
+        isDisabled,
+        isFocused,
+        isSelected,
+        children,
+        innerProps,
+        ...rest
+    }) => {
+        const [isActive, setIsActive] = useState(false);
+
+        const onMouseDown = () => setIsActive(true);
+        const onMouseUp = () => setIsActive(false);
+        const onMouseLeave = () => setIsActive(false);
+
+        // styles
+        let bg = 'transparent';
+        if (isFocused) bg = '#eee';
+        if (isActive) bg = '#B2D4FF';
+
+        const style = {
+            alignItems: 'center',
+            backgroundColor: bg,
+            color: 'inherit',
+            display: 'flex ',
+        };
+
+        // prop assignment
+        const props = {
+            ...innerProps,
+            onMouseDown,
+            onMouseUp,
+            onMouseLeave,
+            style,
+        };
+
+        return (
+            <components.Option
+                {...rest}
+                isDisabled={isDisabled}
+                isFocused={isFocused}
+                isSelected={isSelected}
+                getStyles={getStyles}
+                innerProps={props}
+            >
+                <input type='checkbox' checked={isSelected} className='me-4' />
+                {children}
+            </components.Option>
+        );
+    };
+
+
     return (
-        <>
-        <div className='mt-200 text-center '>
-        <h2>
-          Fast Diamond Search
-        </h2>
-        {/* <h3>
+        < div className='py-5'>
+            <div className='container align-item-center'>
+                <h2>
+                    Fast Diamond Search
+                </h2>
+            </div>
+
+            <Container className='bg-light'>
+                <Row className=' panel panel-blue' >
+                    <Col xs={12} md={4} className='mt-2'>
+                        Shape
+                    </Col>
+                    <Col xs={12} md={8}>
+                        <div style={{ width: '300px' }} >
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                options={shapeOption}
+                                components={{ Option }}
+                            />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Container className='bg-light panel panel-blue'>
+                <Row >
+                    <Col xs={12} md={4} className='mt-2'>
+                        Size
+                    </Col>
+                    <Col xs={12} md={8}>
+                        <div style={{ width: '300px' }} >
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                options={sizeOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Container className='bg-light panel panel-blue'>
+                <Row >
+                    <Col xs={12} md={4} className='mt-2'>
+                        Color White
+                    </Col>
+                    <Col xs={12} md={8}>
+                    <div style={{ width: `300px` }}>
+                        <Select
+                            defaultValue={[]}
+                            isMulti
+                            closeMenuOnSelect={false}
+                            hideSelectedOptions={false}
+                            //   onChange={(options) => {
+                            //     //setStatus(2)
+                            //     if (Array.isArray(options)) {
+                            //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                            //       // console.log('selectedOptions', selectedOptions)
+                            //       adTitleSearch(options.map((opt: any) => opt.value))
+                            //     }
+                            //   }}
+                            options={colorOption}
+                            components={{
+                                Option: InputOption,
+                            }}
+                        />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Container className='bg-light panel panel-blue'>
+                <Row >
+                    <Col xs={12} md={4} className='mt-2'>
+                        Clarity
+                    </Col>
+                    <Col xs={12} md={8}>
+                        <div style={{ width: `300px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={clarityOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            
+            <Container className='bg-light'>
+                <Row >
+                    <Col md={12} className='panel panel-blue' >
+                        this isbigger
+                        <Row>
+                            <Col md={4}>1</Col>
+                            <Col md={4}>2</Col>
+                            <Col md={4}>3</Col>
+                            <Col md={4}>4</Col>
+                            
+                        </Row>
+                    </Col>
+                    {/* <Col xs={12} md={8}>
+                        <div style={{ width: `300px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={finishOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </Col> */}
+                </Row>
+            </Container>
+            
+
+            <div className='d-flex justify-content-around  '>
+                <div className='d-flex flex-column gap-4 align-items-center'>
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Shape</span>
+                        <div style={{ width: `300px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setSelectedOptions(options.map((opt: any) => opt.value))
+                                //       console.log('selectedOptions 1234', selectedOptions)
+                                //       searchValue(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={shapeOption}
+                                components={{
+                                    Option
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Color White</span>
+                        <div style={{ width: `300px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={colorOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Clarity</span>
+                        <div style={{ width: `200px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={clarityOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Fluorescence</span>
+                        <div style={{ width: `200px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={fluoOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Fluorescence Color</span>
+                        <div style={{ width: `200px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={fluocColorOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </div>
+
+
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Grading Report</span>
+                        <div style={{ width: `200px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={gardingOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Finish</span>
+                        <div style={{ width: `200px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={finishOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Cut</span>
+                        <div style={{ width: `200px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={cutOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                    <div className='d-flex align-items-center gap-2 '>
+                        <span className='fs-5 fw-bold pe-3'>Polish</span>
+                        <div style={{ width: `200px` }}>
+                            <Select
+                                defaultValue={[]}
+                                isMulti
+                                closeMenuOnSelect={false}
+                                hideSelectedOptions={false}
+                                //   onChange={(options) => {
+                                //     //setStatus(2)
+                                //     if (Array.isArray(options)) {
+                                //       setAdTitleSelectedOptions(options.map((opt: any) => opt.value))
+                                //       // console.log('selectedOptions', selectedOptions)
+                                //       adTitleSearch(options.map((opt: any) => opt.value))
+                                //     }
+                                //   }}
+                                options={polishOption}
+                                components={{
+                                    Option: InputOption,
+                                }}
+                            />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            {/* <h3>
           Search Over <span>1,000,000</span> Diamonds from Thousands of Verified Suppliers Worldwide!
         </h3> */}
-      </div>
-{/* <div class="container-search" id="free-search-container" data-show-items="20" data-page-number="1">
+
+            {/* <div class="container-search" id="free-search-container" data-show-items="20" data-page-number="1">
     <div class="filter-box">
                 <div class="form-group shape-group">
                     <div class="name-filter">Shape <span class="red">*</span></div>
@@ -795,7 +1333,7 @@ const Search = () => {
 
 
 
-        </>
+        </div>
     );
 
 };
