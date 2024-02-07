@@ -9,201 +9,260 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Roboto', sans-serif,
     monospace;
-    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Open Sans', sans-serif;  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
 
 
+/*
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* font-family: "Rubik+Beastly",cursive; */
-}
-.navbar{
-  background-color: blanchedalmond;
-}
-.navbar-brand{
-  font-size: 1.9rem;
-  color: blueviolet;
-}
+TemplateMo 559 Zay Shop
 
-.navbar a{
-  font-size: 1.3rem;
-  text-transform: capitalize;
-}
+https://templatemo.com/tm-559-zay-shop
 
-.menu_active{
-  font-weight: bold;
-  border-bottom: 1px solid blue;
-}
-.navbar a:hover{
-  color: cornflowerblue;
-}
+---------------------------------------------
+Table of contents
+------------------------------------------------
+1. Typography
+2. General
+3. Nav
+4. Hero Carousel
+5. Accordion
+6. Shop
+7. Product
+8. Carousel Hero
+9. Carousel Brand
+10. Services
+11. Contact map
+12. Footer
+13. Small devices (landscape phones, 576px and up)
+14. Medium devices (tablets, 768px and up)
+15. Large devices (desktops, 992px and up)
+16. Extra large devices (large desktops, 1200px and up)
+--------------------------------------------- */
 
-#header{
-  width: 100%;
-  height: 80vh;
-  margin-top: 70px;
-}
 
-#header h1{
-  margin: 0,0,10px,0;
-  font-size: 48px;
-  font-weight: 700;
-  color:black
-}
 
-#header .brand-name{
-  color:#3498db;
-}
 
-#header h2{
-  color: #484844;
-  font-size: 20px;
+/* Typography */
+body, ul, li, p, a, label, input, div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important;
 }
-
-#header .btn-get-started{
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  color: #3498db;
-  border:2px solid #3498db;
-  text-decoration: none;
+.h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px !important;
+  font-weight: 200 !important;
 }
-
-#header .btn-get-started:hover{
-  background: #3498db;
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px !important;
+  font-weight: 300;
+}
+.h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px !important;
+}
+/* General */
+.logo { font-weight: 500 !important;}
+.text-warning {  color: #ede861 !important;}
+.text-muted { color: #bcbcbc !important;}
+.text-success { color: #59ab6e !important;}
+.text-light { color: #cfd6e1 !important;}
+.bg-dark { background-color: #212934 !important;}
+.bg-light { background-color: #e9eef5 !important;}
+.bg-black { background-color: #1d242d !important;}
+.bg-success { background-color: #59ab6e !important;}
+.btn-success {
+  background-color: #59ab6e !important;
+  border-color: #56ae6c !important;
+}
+.pagination .page-link:hover {color: #000;}
+.pagination .page-link:hover, .pagination .page-link.active {
+  background-color: #69bb7e;
   color: #fff;
 }
+/* Nav */
+#templatemo_nav_top { min-height: 40px;}
+#templatemo_nav_top * { font-size: .9em !important;}
+#templatemo_main_nav a { color: #212934;}
+#templatemo_main_nav a:hover { color: #69bb7e;}
+#templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
 
-.header-img{
-  text-align: right;
+/* Hero Carousel */
+#template-mo-zay-hero-carousel { background: #efefef !important;}
+/* Accordion */
+.templatemo-accordion a { color: #000;}
+.templatemo-accordion a:hover { color: #333d4a;}
+/* Shop */
+.shop-top-menu a:hover { color: #69bb7e !important;}
+/* Product */
+.product-wap { box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);}
+.product-wap .product-color-dot.color-dot-red { background:#f71515;}
+.product-wap .product-color-dot.color-dot-blue { background:#6db4fe;}
+.product-wap .product-color-dot.color-dot-black { background:#000000;}
+.product-wap .product-color-dot.color-dot-light { background:#e0e0e0;}
+.product-wap .product-color-dot.color-dot-green { background:#0bff7e;}
+.card.product-wap .card .product-overlay {
+  background: rgba(0,0,0,.2);
+  visibility: hidden;
+  opacity: 0;
+  transition: .3s;
+}
+.card.product-wap:hover .card .product-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.card.product-wap a { color: #000;}
+#carousel-related-product .slick-slide:focus { outline: none !important;}
+#carousel-related-product .slick-dots li button:before {
+  font-size: 15px;
+  margin-top: 20px;
+}
+/* Brand */
+.brand-img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: .5s;
+}
+.brand-img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+/* Carousel Hero */
+#template-mo-zay-hero-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: #59ab6e;
+}
+#template-mo-zay-hero-carousel .carousel-control-next i,
+#template-mo-zay-hero-carousel .carousel-control-prev i {
+  color: #59ab6e !important;
+  font-size: 2.8em !important;
+}
+/* Carousel Brand */
+.tempaltemo-carousel .h1 {
+  font-size: .5em !important;
+  color: #000 !important;
+}
+/* Services */
+.services-icon-wap {transition: .3s;}
+.services-icon-wap:hover, .services-icon-wap:hover i {color: #fff;}
+.services-icon-wap:hover {background: #69bb7e;}
+/* Contact map */
+.leaflet-control a, .leaflet-control { font-size: 10px !important;}
+.form-control { border: 1px solid #e8e8e8;}
+/* Footer */
+#tempaltemo_footer a { color: #dcdde1;}
+#tempaltemo_footer a:hover { color: #68bb7d;}
+#tempaltemo_footer ul.footer-link-list li { padding-top: 10px;}
+#tempaltemo_footer ul.footer-icons li {
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.6em;
+}
+#tempaltemo_footer ul.footer-icons li:hover {
+  background-color: #cfd6e1;
+  transition: .5s;
+}
+#tempaltemo_footer ul.footer-icons li:hover i {
+  color: #212934;
+  transition: .5s;
+}
+#tempaltemo_footer .border-light { border-color: #2d343f !important;}
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+*/
+/* Small devices (landscape phones, 576px and up)*/
+.product-wap .h3, .product-wap li, .product-wap i, .product-wap p {
+  font-size: 12px !important;
+}
+.product-wap .product-color-dot {
+  width: 6px;
+  height: 6px;
 }
 
-#header .animated{
-  animation: 'up-down 2s ease-in-out infinite alternate-reverse both' ;
+.grid-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
-
-/* // top header */
-.top-header {
-  background-color: #333; /* Set your desired background color */
-  color: #fff; /* Set your desired text color */
-  padding: 10px 0; /* Add padding as needed */
+.g-item{
+  /* padding-bottom:10px ; */
 }
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.info-block {
-  margin-top: 10px; /* Adjust the margin as needed */
-}
-/* ---- */
-
-.carousel-container {
-  height: 600px; /* Adjust the height according to your preference */
-}
-
-.carousel-image {
-  height: auto; /* Allow the image to maintain its aspect ratio */
-  max-height: 600px; /* Set a maximum height to avoid overly tall images */
-  margin: 0 auto; /* Center the image horizontally */
-} 
-
-.social-grid ul {
-  margin: 0;
-  padding: 0;
-}
-
-.social-grid li {
-  display: inline-block;
-  margin-left: 10px; /* Adjust the margin between social icons */
-}
-
-.social-grid a {
-  color: #fff; /* Set your desired color for social icons */
-  text-decoration: none;
-}
-
-.top-header {
-  background-color: #f7f0f0;
-  color: #020101;
-  padding: 5px 0;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.info-block,
-.social-icons a {
-  color: #0a0606;
-  margin-right: 25px;
-  align-items-center:center;
-}
-
-.social-icons a:hover {
-  color: #007bff; /* Change the color on hover */
-}
-
-/* search */
-/* Default styles */
-.d-flex.align-items-center.gap-2 {
-  margin-bottom: 20px; /* Add margin for spacing between each Select component */
-}
-
-/* .d-flex {
-  display: flex;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.gap-2 {
-  gap: 2rem;
-}
-
-.fs-5 {
-  font-size: 1.25rem;
-}
-
-.fw-bold {
-  font-weight: bold;
-}
-
-.pe-3 {
-  padding-right: 0.75rem;
-} */
-
-/* Add more styles as needed */
-
-/* //search */
-
 .panel{
   border-radius: 0.3rem;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
-.panel-blue{
- border: 1px solid #0087FF;
- background-color: #DDEDFF;
- color:#0087FF
+.nav-bg{
+  background-color: #08294d
+  /* #08294d; */
 }
+
+.panel-blue{
+ /* border: 1px solid #0087FF; */
+ background-color: #ebf1f7;
+ color:#00060a
+}
+
+
+.version-wrapper{
+  gap: 30px;
+  /* justify-content: flex-start; */
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+  grid-template-rows: 50px;
+}
+.version-wrapper .version-item{
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  align-items: center;
+  gap:10px;
+}
+.tableNav-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+.tableNav-wrapper .btn-div{
+flex-basis: 100px;
+}
+
+
+@media (min-width: 576px) {
+  .tempaltemo-carousel .h1 { font-size: 1em !important;}
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  #templatemo_main_nav .navbar-nav {max-width: 450px;}
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  #templatemo_main_nav .navbar-nav {max-width: 550px;}
+  #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
+  .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
+  .product-wap .product-color-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+
 @-webkit-keyframes up-down {
   0%{
     transform: translateY(10px);
@@ -225,51 +284,15 @@ code {
 
 /* Responsive styling for smaller screens */
 @media (max-width: 767px) {
-  .d-flex.align-items-center.gap-2 {
-    width: 100%; /* Make each item take full width on smaller screens */
-  }
+  
 }
 
 @media (max-width:991px){
-  #header{
-    height: 80vh;
-    text-align: center;
-  }
-  #header .header-img{
-    text-align: center;
-  }
-  #header .header-img img{
-    width: 60%;
-  }
+ 
 }
 
 @media(max-width: 768px){
-  #header{
-    margin-top :20px ;
-  }
-  #header h1{
-    font-size: 28px;
-  }
-  #header h2{
-    font-size: 18px;
-    margin-bottom: 30px;
-  }
-  #header .header-img img{
-    width:70%
-  }
-  .info-block,
-  .social-icons {
-    text-align: center;
-    margin-top: 10px;
-  }
-
-  .d-flex {
-    flex-direction: column; /* Change to column layout on smaller screens */
-  }
-
-  .gap-2 {
-    gap: 1rem; /* Adjust gap for smaller screens */
-  }
+ 
 }
   
 

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
-
+  // https://www.diyamimpex.com/  https://www.argodiam.com/
   return (
     <Container className="d-flex justify-content-center align-items-center vh-100">
     <Card style={{ width: '400px'}}>
