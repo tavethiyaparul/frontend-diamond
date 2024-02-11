@@ -28,7 +28,7 @@ const Footer = () => {
                             </ul>
                         </div>
 
-                        <div className="col-md-4 pt-5">
+                        {/* <div className="col-md-4 pt-5">
                             <h2 className="h2 text-light border-bottom pb-3 border-light">Products</h2>
                             <ul className="list-unstyled text-light footer-link-list">
                                 <li>
@@ -67,7 +67,7 @@ const Footer = () => {
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
 
                         <div className="col-md-4 pt-5">
                             <h2 className="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
@@ -85,11 +85,6 @@ const Footer = () => {
                                 <li>
                                     <a className="text-decoration-none" href="/diamond">
                                         Diamond
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="text-decoration-none" href="/">
-                                        FAQs
                                     </a>
                                 </li>
                                 <li>
@@ -129,7 +124,7 @@ const Footer = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="col-auto">
+                        {/* <div className="col-auto">
                             <label className="sr-only" for="subscribeEmail">
                                 Email address
                             </label>
@@ -137,7 +132,7 @@ const Footer = () => {
                                 <input type="text" className="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address" />
                                 <div className="input-group-text btn-success text-light">Subscribe</div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -147,9 +142,9 @@ const Footer = () => {
                             <div className="col-12">
                                 <p className="text-left text-light">
                                     Copyright &copy; 2021 Company Name | Designed by{" "}
-                                    <a rel="sponsored" href="https://templatemo.com" target="_blank">
+                                    {/* <a rel="sponsored" href="https://templatemo.com" target="_blank">
                                         TemplateMo
-                                    </a>
+                                    </a> */}
                                 </p>
                             </div>
                         </div>

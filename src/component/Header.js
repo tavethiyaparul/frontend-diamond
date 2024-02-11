@@ -71,7 +71,7 @@ const Header = () => {
                                 <li className="nav-item">
                                     <a className="nav-link" href="/">
                                         Home
-                                    </a>
+                                    </a>   
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/about">
@@ -106,10 +106,19 @@ const Header = () => {
                                 <i className="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                                 <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
                             </a> */}
-                            <a className="nav-icon position-relative text-decoration-none" href="/login">
-                                <i className="fa fa-fw fa-user text-dark mr-3" data-bs-toggle="popover" title="User Information" data-bs-content="This is where you can display user information"></i>
+                            {/* <a className="nav-icon position-relative text-decoration-none" href="/login">
+                                <i className="fa fa-fw fa-user text-dark mr-3" data-bs-toggle="popover" title="User Information" data-bs-content="This is where you can display user information"></i> */}
                                 {/* <span className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span> */}
-                            </a>
+                            {/* </a> */}
+                         
+                            <i class="fa fa-fw fa-user text-dark mr-3"  data-bs-toggle="dropdown" aria-expanded="false">
+                            </i>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item " href="/login">Login</a></li>
+                                <li><a class="dropdown-item" href="/signup">Register</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                            
                         </div>
                     </div>
                 </div>

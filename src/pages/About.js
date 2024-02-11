@@ -9,7 +9,8 @@ const About = () => {
                     <div className="row align-items-center py-5">
                         <div className="col-md-8 text-black">
                             <h1>About Us</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <p>Diyam is one of the main Manufacturers and Distributors of Polished LAB GROWN DIAMOND and Supplies loose Polished LAB GROWN DIAMOND to the Jewellery Trade Globally. The Manufacturing Facilities in Surat.</p>
+                            <p>The Success of Dyam Impex is Attributed to our customer-centric Philosophy, the standard Standards We Maintain, The Meticulous Manufacturing Skills of our Employees, and Fair trading Practices Which We actualize throughout the globe. This together with our core Family values ensures a loyal Customer base everywhere in the world</p>
                         </div>
                         <div className="col-md-4">
                             <img src={image1} alt="About Hero" />
@@ -17,8 +18,9 @@ const About = () => {
                     </div>
                 </div>
             </section>
+            
 
-            <section className="container py-5">
+            {/* <section className="container py-5">
                 <div className="row text-center pt-5 pb-3">
                     <div className="col-lg-6 m-auto">
                         <h1 className="h1">Our Services</h1>
@@ -62,7 +64,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             {/* <div className="pt-30">
                 <div className="container pt-5">
                     <div className="row">

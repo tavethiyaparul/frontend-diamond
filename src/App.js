@@ -13,12 +13,18 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Search from "./component/Search"
+import {ToastContainer, toast} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import DiamondDetails from "./pages/DiamondDetails"
 
 const App = () => {
     return (
+        <>
+       <ToastContainer autoClose={1000} position='top-center' />
         <Router>
             <div>
                 <Header />
+               
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
@@ -26,7 +32,7 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/diamond" element={<Search />} />
-
+                    <Route path="/diamond/:id" element={<DiamondDetails />} />
                     <Route path="*" element={<Error />} />
 
                     {/* <Route path="/contact" element={<Contact />} /> */}
@@ -34,6 +40,7 @@ const App = () => {
                 <Footer />
             </div>
         </Router>
+        </>
     )
 }
 

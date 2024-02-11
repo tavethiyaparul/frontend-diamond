@@ -1,5 +1,7 @@
 import axios from "axios";
 
+let BASE_URL="http://localhost:3000/api"
+
 export const makeApiCall = async (
   method ,
   endpoint,
@@ -23,12 +25,13 @@ export const makeApiCall = async (
 
   const config = {
     headers: headers,
+    // withCredentials: true
   };
 
   try {
     let response;
     if (method === "post") {
-      response = await axios.post(BASE_URL + endpoint, params, config);
+      response = await axios.post(BASE_URL+ endpoint, params, config);
     }else if(method == "delete"){
       if (params === null) {
         params = "";
@@ -40,15 +43,19 @@ export const makeApiCall = async (
       }
       response = await axios.get(BASE_URL + endpoint + params, config);
     }
-    if (response.data.status === 10) {
-    //   handleLogout(navigateFunc);
-    } else {
+     if (response.data.status === 10) {
+    //   console.log("make api",response.data.status)
+    //     window.location.href = "/login";
+    //     // window.location.reload()
+    // //   handleLogout(navigateFunc);
+     } else {
       return response;
-    }
+     }
   } catch (error) {
     // if (error.response.data.status === 10) {
-    //   handleLogout(null);
+    //   // handleLogout(null);
     //   window.location.href = "/login";
+    //   // window.location.reload()
     //   console.log("API call logout");
     // }
     console.error("API call error:", error);

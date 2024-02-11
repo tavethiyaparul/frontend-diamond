@@ -14,6 +14,10 @@ code {
     /* font-family: 'Open Sans', sans-serif;  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',*/
 }
 
+.table-responsive {
+  position: relative;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
 
 
@@ -237,7 +241,71 @@ body, ul, li, p, a, label, input, div {
 .tableNav-wrapper .btn-div{
 flex-basis: 100px;
 }
+/* //// */
+.vision-section {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+.vision-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #343a40;
+}
+.vision-statement {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
 
+/* testimation */
+ /* Custom Styles */
+ .testimonial-section {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+}
+.testimonial-card {
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  background-color: #ffffff;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+.testimonial-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+.testimonial-text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* slide */
+.product-banner-statistics {
+  background-color: #f8f9fa; /* Set background color */
+  padding: 50px 0; /* Add some padding */
+}
+.banner-slide-item {
+  text-align: center; /* Center align content */
+}
+.banner-text3 {
+  color: #385264; /* Set text color */
+  padding-top: 7px; /* Add some top padding */
+}
 
 @media (min-width: 576px) {
   .tempaltemo-carousel .h1 { font-size: 1em !important;}
