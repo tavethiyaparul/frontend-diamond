@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import "../index.css"
 import { makeApiCall } from "../common/MakeApicall"
-import logo from "../images/logo-1.svg"
+import logo from "../images/logo-new.svg"
 
 const Header = () => {
     const navigate = useNavigate()
@@ -39,12 +39,7 @@ const Header = () => {
                             <a className="text-light" href="https://www.instagram.com/jigneshkumar_tagadiya/" target="_blank">
                                 <i className="fab fa-instagram fa-sm fa-fw me-2"></i>
                             </a>
-                            {/* <a className="text-light" href="https://twitter.com/" target="_blank">
-                                <i className="fab fa-twitter fa-sm fa-fw me-2"></i>
-                            </a>
-                            <a className="text-light" href="https://www.linkedin.com/" target="_blank">
-                                <i className="fab fa-linkedin fa-sm fa-fw"></i>
-                            </a> */}
+                           
                         </div>
                     </div>
                 </div>
@@ -111,17 +106,17 @@ const Header = () => {
                             <ul class="dropdown-menu p-0 mr-0 ">
                                 <li>
                                     <a class="dropdown-item " href="/login">
-                                        Login
+                                        Sign In
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="/signup">
-                                        Register
+                                        Sign Up
                                     </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" onClick={() => logout()}>
-                                        Logout
+                                        Sign Out
                                     </a>
                                 </li>
                             </ul>

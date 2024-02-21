@@ -5,7 +5,7 @@ import { ErrorMessage, Field, Formik } from "formik"
 import * as Yup from "yup"
 import { Form, Button, Card } from "react-bootstrap"
 import bg1 from "../images/d7.jpg"
-import logo from "../images/logo-1.svg"
+import logo from "../images/logo-new.svg"
 
 const Contact = () => {
     // const [input, setInput] = useState({
@@ -47,7 +47,7 @@ const Contact = () => {
     return (
         <>
             <div className="container-fluid bg-light py-5">
-                <div className="col-md-6 m-auto text-center">
+                <div className="col-md-6 m-auto text-center ">
                     <h1 className="h1">Contact Us</h1>
                     {/* <p>Proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet.</p> */}
                 </div>
@@ -107,7 +107,7 @@ const Contact = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="text-dark text-center">
-                            <img className="w-50 h-50" src={logo}></img>
+                            <img className="w-50 h-50 mb-4" src={logo}></img>
                                 {/* <h2 className="h2  pb-3 mb-4">Dharmi Impex</h2> */}
                                 <ul className="list-unstyled footer-link-list">
                                 <li>

@@ -28,9 +28,9 @@ const DiamondDetails = () => {
         <>
             <section class="stone-details section-padding first-section row justify-content-center">
                 <div class="col-md-10 col-xs-12">
-                    <div class="details-container">
-                        <div class="diamond-media card-box">
-                            <div class="details-header">:: Diamond Media ::</div>
+                    <div class="container">
+                        {/* <div class="diamond-media card-box"> */}
+                            {/* <div class="details-header">:: Diamond Media ::</div>
                             {flag ? (
                                 <div class="media-option-view video active">
                                     <iframe width="100%" height="570" id="d-iframe" frameborder="0" src={diamond?.VideoLink}></iframe>
@@ -39,7 +39,7 @@ const DiamondDetails = () => {
                                 <div class="media-option-view image">
                                     <img src={diamond.Photo ? diamond.Photo : ""} />
                                 </div>
-                            )}
+                            )} */}
                             {/* <div class="media-option-view video active">
                                 <iframe width="100%" height="570" id="d-iframe" frameborder="0" src={diamond?.VideoLink}></iframe>
                             </div>
@@ -47,13 +47,13 @@ const DiamondDetails = () => {
                                 <img src={diamond.Photo} />
                             </div> */}
 
-                            <div class="diamond-media-options" id="media-selection">
+                            {/* <div class="diamond-media-options" id="media-selection">
                                 <i class="fa fa-video-camera fa-3x active" data-value="video" onClick={() => setFlag(true)}></i>
                                 <i class="fa fa-image fa-3x" data-value="image" onClick={() => setFlag(false)}></i>
-                            </div>
-                        </div>
+                            </div> */}
+                        {/* </div> */}
                         <div class="stone-data card-box">
-                            <div class="details-header">:: Diamond Details ::</div>
+                            <div class="details-header"> Diamond Details </div>
                             {/* <!--                <div class="row ">-->
 <!--                    <div class="col-md-6 col-sm-6 col-xs-6">-->
 <!--                        <p class="sd-table-title ml-2 text-right text-lg">Stone ID</p>-->
@@ -180,7 +180,7 @@ const DiamondDetails = () => {
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class=" text-center">
+                            {/* <div class=" text-center">
                                 <div class="sd-table-title mb-2"> Sharing and Downloading</div>
                                 <div class="diamond-media-options download-options">
                                     <a>
@@ -190,7 +190,7 @@ const DiamondDetails = () => {
                                         </i>
                                     </a>
                                 </div>
-                            </div>{" "}
+                            </div>{" "} */}
                         </div>
                     </div>
                 </div>
